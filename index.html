@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/tachyons.min.css">
+    <title>Caesar Cypher</title>
+</head>
+<body>
+    <section class="w-100 vh-100 pa3 sans-serif">
+        <div class="mw7 pa3 center">
+            <h1> <span class="bg-red white pa2">Caesar Cypher</span></h1>
+            <p>
+                In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, 
+                is one of the simplest and most widely known encryption techniques.<br>
+                This implementation <span class="b">ignores case</span> and does not use <span class="b">modulo arithmetic</span>.
+            </p>
+            <div class="form ba pa3 mr7 br1">
+                <div class="mt3">
+                    <label class="db fw6 f6" for="string">Plaintext:</label>
+                    <textarea class="mt1 ba b--gray br1 pa2" name="string" id="string" cols="20" rows="5"></textarea>
+                </div>
+                <div class="mt3">
+                    <label class="db fw6 f6" for="shift">Shift:</label>
+                    <input class="input-reset pa2 w-20 mt1 ba b--gray br1" type="number" name="shift" id="shift" max="25" min="1">
+                </div>
+                <div class="mt3">
+                    <a class="f6 link dim br1 ba ph3 pv2 mb2 dib bg-red grow white" id="btn-encrypt" href="#0">Encrypt</a>
+                </div>
+                <div class="mt3">
+                    <label class="db fw6 f6" for="encryptedString">Encrypted Text:</label>
+                    <textarea class="mt1 ba b--gray br1 pa2" name="encryptedString" id="encryptedString" cols="20" rows="5"></textarea>
+                </div>
+                <div class="mt3">
+                        <a class="f6 link dim br1 ba ph3 pv2 mb2 dib bg-red grow white" id="btn-decrypt" href="#0">Decrypt</a>
+                        <a class="f6 link dim br1 ba ph3 pv2 mb2 dib bg-red grow white" id="btn-brute-force" href="#0">Bruteforce</a>
+                </div>  
+                <div class="mt3">
+                    <p class="fw6 f6">Bruteforce Table:</p>
+                    <table class="collapse">
+                        <thead>
+                            <th class="pv2 ph3 bg-red white f6 ttu">Shift</th>
+                            <th class="pv2 ph3 bg-red white f6 ttu">Decrypted Text</th>
+                        </thead>
+                        <tbody>
+                            <tr class="tc striped--light-gray">
+                                <td class="pv2" colspan="2">Nothing here!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>              
+            </div>
+        </div>
+    </section>
+<script src="js/index.js"></script>
+</body>
+</html>
